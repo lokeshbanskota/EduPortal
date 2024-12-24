@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/EduPortal/obj/project.nuget.cache
+/.vs/EduPortal/v17/.suo
+*.vsidx
+/.vs/EduPortal/FileContentIndex/0c8fd1c4-7876-4f48-8406-c922e2b073ff.vsidx
+/EduPortal/obj/Debug/net8.0/EduPortal.AssemblyInfo.cs
+/EduPortal/obj/Debug/net8.0/EduPortal.AssemblyInfoInputs.cache
+/EduPortal/obj/Debug/net8.0/EduPortal.assets.cache
+/EduPortal/obj/Debug/net8.0/EduPortal.GeneratedMSBuildEditorConfig.editorconfig
+/EduPortal/obj/EduPortal.csproj.nuget.dgspec.json
+/EduPortal/obj/project.assets.json
