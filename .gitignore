@@ -28,3 +28,6 @@
 *.json
 /.vs/EduPortal/DesignTimeBuild/.dtbcache.v2
 /EduPortal/obj/Debug/net8.0/EduPortal.csproj.CoreCompileInputs.cache
+/.vs/EduPortal/v17/.futdcache.v2
+/.vs/ProjectEvaluation/eduportal.metadata.v7.bin
+/.vs/ProjectEvaluation/eduportal.projects.v7.bin
