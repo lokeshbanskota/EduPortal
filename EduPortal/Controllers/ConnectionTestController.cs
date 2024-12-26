@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 [Route("api/[controller]")]
 [ApiController]
-public class WeatherForecastController : ControllerBase
+public class ConnectionTestController : ControllerBase
 {
     [Authorize(Roles = UserRoles.Admin)]
     [HttpGet("Admin")]
