@@ -1,5 +1,6 @@
 using EduPortal.Authentication;
 using EduPortal.DBContext;
+using EduPortal.Middleware;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,8 @@ builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var app = builder.Build();
+// Add the middleware to the pipeline
+app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 // Ensure database is created
 //using (var scope = app.Services.CreateScope())
 //{
