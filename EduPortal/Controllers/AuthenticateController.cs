@@ -22,7 +22,6 @@ namespace EduPortal.Controllers
             _authenticateService = authenticateService;
             _configuration = configuration;
         }
-
         [HttpPost]
         [Route("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
@@ -31,26 +30,7 @@ namespace EduPortal.Controllers
             if (user != null && await _authenticateService.CheckPasswordAsync(user, model.Password))
             {
                 var userRoles = await _authenticateService.GetRolesAsync(user);
-                var authClaims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, user.UserName),
-                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                };
-                foreach (var userRole in userRoles)
-                {
-                    authClaims.Add(new Claim(ClaimTypes.Role, userRole));
-                }
-
-                var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
-
-                var token = new JwtSecurityToken(
-                    issuer: _configuration["JWT:ValidIssuer"],
-                    audience: _configuration["JWT:ValidAudience"],
-                    expires: DateTime.Now.AddMinutes(10),
-                    claims: authClaims,
-                    signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
-                    );
-
+                var token =TokenManager.CreateToken(user, userRoles, _configuration);
                 return Ok(new
                 {
                     token = new JwtSecurityTokenHandler().WriteToken(token),
@@ -105,16 +85,10 @@ namespace EduPortal.Controllers
             if (!result.Succeeded)
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "User creation failed! Please check user details and try again." });
 
-            if (!await _authenticateService.RoleExistsAsync(UserRoles.Admin))
-                await _authenticateService.CreateRoleAsync(new IdentityRole(UserRoles.Admin));
-            if (!await _authenticateService.RoleExistsAsync(UserRoles.User))
-                await _authenticateService.CreateRoleAsync(new IdentityRole(UserRoles.User));
-
             if (await _authenticateService.RoleExistsAsync(UserRoles.Admin))
             {
                 await _authenticateService.AddToRoleAsync(user, UserRoles.Admin);
             }
-
             return Ok(new Response { Status = "Success", Message = "User created successfully!" });
         }
     }
