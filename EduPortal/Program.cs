@@ -9,7 +9,6 @@ builder.Services.AddSingleton<RabbitMQProducer>();
 builder.Services.AddHostedService<RabbitMQBackgroundService>();
 builder.Services.AddBusiness(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
-
 var app = builder.Build();
 app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
