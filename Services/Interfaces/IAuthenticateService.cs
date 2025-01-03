@@ -12,6 +12,7 @@ namespace Services.Interfaces
         public Task<bool> RoleExistsAsync(string role);
         public Task<IdentityResult> AddToRoleAsync(ApplicationUser applicationUser, string role);
         public Task<IdentityResult> CreateRoleAsync(IdentityRole role);
+        public Task<IList<ApplicationUser>> GetListByUserTypeAsync(string userType);
 
     }
 }

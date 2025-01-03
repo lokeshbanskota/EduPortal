@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Services.Authentication;
 using Services.Interfaces;
 
@@ -38,6 +39,11 @@ namespace Services.Implementations
         public async Task<IdentityResult> CreateUserAsync(ApplicationUser applicationUser, string password)
         {
             return await _userManager.CreateAsync(applicationUser, password);
+        }
+
+        public async Task<IList<ApplicationUser>> GetListByUserTypeAsync(string userType)
+        {
+            return await _userManager.Users.Where(a => a.UserType == userType).ToListAsync();
         }
 
         public async Task<IList<string>> GetRolesAsync(ApplicationUser applicationUser)

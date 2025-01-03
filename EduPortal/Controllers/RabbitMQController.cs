@@ -1,5 +1,7 @@
 ﻿using EduPortal.RabbitMQ;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Services;
 
 namespace EduPortal.Controllers
 {
@@ -15,6 +17,7 @@ namespace EduPortal.Controllers
         }
 
         [HttpPost("send")]
+        [Authorize(Roles = UserRoles.Admin)]
         public IActionResult SendMessage([FromQuery] string queue, [FromBody] string message)
         {
             _producer.PublishMessage(queue, message);
