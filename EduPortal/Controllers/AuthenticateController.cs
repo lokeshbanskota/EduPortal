@@ -1,12 +1,9 @@
-﻿using EduPortal.Authentication;
-using EduPortal.Models;
-using EduPortal.Services.Interfaces;
-using Microsoft.AspNetCore.Identity;
+﻿using EduPortal.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
+using Services;
+using Services.Authentication;
+using Services.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 
 namespace EduPortal.Controllers
 {

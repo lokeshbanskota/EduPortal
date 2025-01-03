@@ -1,7 +1,7 @@
-﻿using EduPortal.Authentication;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
+using Services.Authentication;
 
-namespace EduPortal.Services.Interfaces
+namespace Services.Interfaces
 {
     public interface IAuthenticateService
     {

@@ -1,6 +1,6 @@
-using EduPortal.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Services;
 
 [Route("api/[controller]")]
 [ApiController]

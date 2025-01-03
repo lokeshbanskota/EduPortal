@@ -1,8 +1,6 @@
-﻿using EduPortal.Authentication;
-using EduPortal.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
+using Services.Authentication;
 
 namespace EduPortal.DBContext
 {

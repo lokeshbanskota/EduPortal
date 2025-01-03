@@ -1,8 +1,8 @@
-﻿using EduPortal.Authentication;
-using EduPortal.DBContext;
-using EduPortal.Services.Implementations;
-using EduPortal.Services.Interfaces;
+﻿using EduPortal.DBContext;
 using Microsoft.AspNetCore.Identity;
+using Services.Authentication;
+using Services.Implementations;
+using Services.Interfaces;
 namespace EduPortal.Middleware
 {
     public static class BusinessDIMiddleware

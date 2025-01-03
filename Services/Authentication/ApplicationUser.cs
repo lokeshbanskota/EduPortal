@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace EduPortal.Authentication
+namespace Services.Authentication
 {
     public class ApplicationUser : IdentityUser
     {

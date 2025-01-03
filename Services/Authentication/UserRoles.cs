@@ -1,4 +1,4 @@
-﻿namespace EduPortal.Authentication
+﻿namespace Services
 {
     public static class UserRoles
     {
