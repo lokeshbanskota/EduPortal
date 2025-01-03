@@ -3,6 +3,7 @@
 ################################################################################
 [Bb]in/
 [Oo]bj/
+.vs/
 /EduPortal/obj/project.nuget.cache
 /.vs/EduPortal/v17/.suo
 *.vsidx
