@@ -1,0 +1,13 @@
+D:\EduPortal\Services\obj\Debug\net8.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\EduPortal\Services\obj\Debug\net8.0\Services.AssemblyInfoInputs.cache
+D:\EduPortal\Services\obj\Debug\net8.0\Services.AssemblyInfo.cs
+D:\EduPortal\Services\obj\Debug\net8.0\Services.csproj.CoreCompileInputs.cache
+D:\EduPortal\Services\obj\Debug\net8.0\Services.sourcelink.json
+D:\EduPortal\Services\obj\Debug\net8.0\Services.csproj.AssemblyReference.cache
+D:\EduPortal\Services\bin\Debug\net8.0\Services.deps.json
+D:\EduPortal\Services\bin\Debug\net8.0\Services.dll
+D:\EduPortal\Services\bin\Debug\net8.0\Services.pdb
+D:\EduPortal\Services\obj\Debug\net8.0\Services.dll
+D:\EduPortal\Services\obj\Debug\net8.0\refint\Services.dll
+D:\EduPortal\Services\obj\Debug\net8.0\Services.pdb
+D:\EduPortal\Services\obj\Debug\net8.0\ref\Services.dll

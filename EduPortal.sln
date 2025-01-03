@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduPortal", "EduPortal\EduPortal.csproj", "{FF00CCDB-C84D-491E-9F1E-4FADECABE522}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduPortalTesting", "EduPortalTesting\EduPortalTesting.csproj", "{98900C86-8B7A-4BF5-A0B6-97917C859610}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduPortalTesting", "EduPortalTesting\EduPortalTesting.csproj", "{98900C86-8B7A-4BF5-A0B6-97917C859610}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{3C0F1789-387F-48A3-A064-BE0ABCDFD0ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{98900C86-8B7A-4BF5-A0B6-97917C859610}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98900C86-8B7A-4BF5-A0B6-97917C859610}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98900C86-8B7A-4BF5-A0B6-97917C859610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C0F1789-387F-48A3-A064-BE0ABCDFD0ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C0F1789-387F-48A3-A064-BE0ABCDFD0ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C0F1789-387F-48A3-A064-BE0ABCDFD0ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C0F1789-387F-48A3-A064-BE0ABCDFD0ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
