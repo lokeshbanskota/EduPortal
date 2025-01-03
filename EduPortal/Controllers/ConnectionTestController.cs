@@ -17,7 +17,7 @@ public class ConnectionTestController : ControllerBase
     public async Task<IActionResult> GetAdmin()
     {
         var adminList = _authenticateService.GetListByUserTypeAsync("Admin");
-        return Ok(new { adminList });
+        return  Ok(new { adminList });
     }
 
     [Authorize(Roles = UserRoles.User)]
